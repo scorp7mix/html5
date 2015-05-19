@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        a {
+            display: block;
+            width: 200px;
+            height: 100px;
+            margin-bottom: 20px;
+            /* 1 */
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            /* 3 */
+            font-family: sans-serif;
+            font-size: 40px;
+            line-height: 100px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #888;
+            text-shadow: -1px -1px 1px #000,
+                         1px 1px 1px #fff;
+            /* 4 */
+            -webkit-box-shadow: 10px 7px 20px #333;
+            -moz-box-shadow: 10px 7px 20px #333;
+            box-shadow: 10px 7px 20px #333;
+        }
+        a:active {
+            /* 6 */
+            position: relative;
+            top: 1px;
+            -webkit-box-shadow: 10px 6px 20px #333;
+            -moz-box-shadow: 10px 6px 20px #333;
+            box-shadow: 10px 6px 20px #333;
+        }
+        .a1 {
+            /* 2 */
+            background-color: hsl(0, 50%, 50%);
+        }
+        .a1:hover {
+            /* 5 */
+            background: hsl(0, 50%, 35%);
+        }
+        /* 7 */
+        .a2 {
+            background-color: hsl(120, 50%, 50%);
+        }
+        .a2:hover {
+            background: hsl(120, 50%, 35%);
+        }
+        .a3 {
+            background-color: hsl(240, 50%, 50%);
+        }
+        .a3:hover {
+            background: hsl(240, 50%, 35%);
+        }
+        
+        .test {
+            width: 100px;
+            height: 200px;
+            padding: 0;
+            font-size: 0;
+            resize: both;
+            overflow: hidden;
+        }
+        .block {
+            margin: 0;
+            display: inline-block;
+            width: 50%;
+            height: 50%;
+        }
+        .block1 {
+            background: linear-gradient(to top left, #000, #000 40%, #fff 50%, #fff);
+        }
+        .block2 {
+            background: linear-gradient(to top right, #000, #000 40%, #fff 50%, #fff);
+        }
+        .block3 {
+            background: linear-gradient(to bottom left, #000, #000 40%, #fff 50%, #fff);
+        }
+        .block4 {
+            background: linear-gradient(to bottom right, #000, #000 40%, #fff 50%, #fff);
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="#" class="a1">Кнопка</a>
+    <a href="#" class="a2">Кнопка</a>
+    <a href="#" class="a3">Кнопка</a>
+    <div class="test">
+        <div class="block block1"></div>
+        <div class="block block2"></div>
+        <div class="block block3"></div>
+        <div class="block block4"></div>
+    </div>
+
+</body>
+</html>

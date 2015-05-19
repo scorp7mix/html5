@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Авто блог</title>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:700&subset=cyrillic,cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            width: 720px;
+            margin: 20px auto;
+        }
+        .page-header {
+            font-family: 'Comfortaa';
+            font-size: 45px;
+            text-align: center;
+        }
+        .article-cols {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+
+            -webkit-column-rule: 1px dotted #aaa;
+            -moz-column-rule: 1px dotted #aaa;
+            column-rule: 1px dotted #aaa;
+
+            -webkit-column-gap: 5em;
+            -moz-column-gap: 5em;
+            column-gap: 5em;
+
+            text-align: justify;
+        }
+        .article-figure {
+            width: 80%;
+            margin: 1em auto;
+        }
+        .article-figure-img {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <!-- Шапка -->
 <header role="banner">
     <hgroup>
-        <h1>Блог об иностранных автомобилях</h1>
+        <h1 class="page-header">Блог об иностранных автомобилях</h1>
 
         <h2>Новости авторынка, обзоры моделей и многое другое</h2>
     </hgroup>
@@ -47,13 +81,13 @@
 <!-- Основной контент -->
 <main role="main">
     <!-- Статья -->
-    <article>
+    <article >
         <header>
             <h2>Volvo увеличит выпуск XC90 в Швеции вслед за ростом заказов</h2>
-            Опубликовано
-            <time datetime="2015-05-13T21:00:00.001+03:00"> 13 мая, 21:00 МСК</time>
+            <p>Опубликовано<time datetime="2015-05-13T21:00:00.001+03:00"> 13 мая, 21:00 МСК</time></p>
         </header>
 
+        <div class="article-cols">
         <p>Шведский автопроизводитель Volvo Cars на фоне роста заказов на новое поколение модели Volvo XC90 увеличивает
             объемы производства. Компания в начале мая запустила третью производственную смену и приняла на работу еще
             1500 рабочих. Ранее на заводе планировалось трудоустроить дополнительно только 1300 рабочих. Volvo Cars
@@ -65,18 +99,21 @@
             восхищением принял наш новый XC90. Мы смогли предложить работу 1500 новым рабочим на заводе в Торсланде, где
             будет производиться наша новая модель», — сказал президент и генеральный директор Volvo Cars Хокан
             Самуэльссон.</p>
+        </div>
 
-        <figure>
-            <img src="./volvo_xc_90.jpg" alt="Volvo XC 90">
+        <figure class="article-figure">
+            <img class="article-figure-img" src="./volvo_xc_90.jpg" alt="Volvo XC 90">
             <figcaption>Тестирование нового Volvo XC 90</figcaption>
         </figure>
 
+        <div class="article-cols">
         <p>Новое поколение Volvo XC90 создано на масштабируемой платформе SPA шведской компании. Новая платформа будет
             использоваться и для создания других моделей Volvo. Завод в Торсланде, мощности которого после
             дополнительных инвестиций позволяют собирать до 300 тыс. автомобилей ежегодно, будет производить несколько
             новых моделей на платформе SPA.</p>
 
         <p>Предприятие в Торсланде также выпускает S60, S80, V60, V70 и XC70.</p>
+        </div>
 
         <footer>
             <p><strong>Автор:</strong> Алексей Захаров</p>
@@ -103,14 +140,14 @@
 
         <article>
             <header>
-                Комментарий 1 / Автор: Любитель
+                <h3>Комментарий 1 / Автор: Любитель</h3>
                 <time datetime="2015-05-13T21:30:00.001+03:00"> 13 мая, 21:30</time>
             </header>
             <p>Текст комментария</p>
         </article>
         <article>
             <header>
-                Комментарий 2 / Автор: Эксперт
+                <h3>Комментарий 2 / Автор: Эксперт</h3>
                 <time datetime="2015-05-13T22:30:00.001+03:00"> 13 мая, 22:30</time>
             </header>
             <p>Текст комментария</p>
