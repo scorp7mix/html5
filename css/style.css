@@ -2,6 +2,7 @@ body {
     width: 720px;
     margin: 20px auto;
 }
+/* 1: Подгружаемый шрифт */
 @font-face {
     font-family: 'Good Vibes Pro';
     src: url('../fonts/GoodVibesPro/GoodVibesPro.eot');
@@ -12,7 +13,6 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-/* 1: Подгружаемый шрифт (из google fonts)*/
 .page-header {
     font-family: 'Good Vibes Pro', sans-serif;
     font-size: 60px;
