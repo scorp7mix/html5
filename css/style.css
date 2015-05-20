@@ -2,7 +2,7 @@ body {
     width: 720px;
     margin: 20px auto;
 }
-/* 1: Подгружаемый шрифт */
+/* 1: РџРѕРґРіСЂСѓР¶Р°РµРјС‹Р№ С€СЂРёС„С‚ */
 @font-face {
     font-family: 'Good Vibes Pro';
     src: url('../fonts/GoodVibesPro/GoodVibesPro.eot');
@@ -18,7 +18,7 @@ body {
     font-size: 60px;
     text-align: center;
 }
-/* 2.1: Колонки */
+/* 2.1: РљРѕР»РѕРЅРєРё */
 .article-cols {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -41,7 +41,7 @@ body {
 .article-figure-img {
     width: 100%;
 }
-/* 2.2: Кавычки */
+/* 2.2: РљР°РІС‹С‡РєРё */
 .article-aside {
     position: relative;
     box-sizing: border-box;
@@ -62,7 +62,7 @@ body {
     bottom: 5px;
     right: 5px;
 }
-/* 3 Комментарии */
+/* 3 РљРѕРјРјРµРЅС‚Р°СЂРёРё */
 .comment {
     position: relative;
     width: 95%;
@@ -89,25 +89,25 @@ body {
     position: relative;
     box-sizing: border-box;
     padding: 25px 15px 1px;
-/* 3.1: Скруглить углы */
+/* 3.1: РЎРєСЂСѓРіР»РёС‚СЊ СѓРіР»С‹ */
     border-radius: 10px;
-/* 3.2: Полупрозрачный фон */
+/* 3.2: РџРѕР»СѓРїСЂРѕР·СЂР°С‡РЅС‹Р№ С„РѕРЅ */
     background-color: hsla(60, 50%, 50%, .5);
-/* 3.3: Градиент */
+/* 3.3: Р“СЂР°РґРёРµРЅС‚ */
     background-image: -webkit-linear-gradient(to top, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, 0) 50%);
     background-image: linear-gradient(to top, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, 0) 50%);
-/* 3.4: Тень облака */
+/* 3.4: РўРµРЅСЊ РѕР±Р»Р°РєР° */
     box-shadow: 5px 5px 5px hsl(60, 50%, 20%);
 }
 .comment-cloud:hover {
-/* 3.5: Тень текста при наведении */
+/* 3.5: РўРµРЅСЊ С‚РµРєСЃС‚Р° РїСЂРё РЅР°РІРµРґРµРЅРёРё */
     text-shadow: 1px 1px 1px hsl(60, 50%, 20%);
-/* 3.6: Перемещение при наведении */
+/* 3.6: РџРµСЂРµРјРµС‰РµРЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
     top: -2px;
     left: -2px;
     box-shadow: 7px 7px 5px hsl(60, 50%, 20%);
 }
-/* 3.8: Фон четных комментариев */
+/* 3.8: Р¤РѕРЅ С‡РµС‚РЅС‹С… РєРѕРјРјРµРЅС‚Р°СЂРёРµРІ */
 .comment:nth-of-type(even) .comment-cloud {
     background-color: hsla(60, 50%, 35%, .5);
 }
@@ -130,10 +130,10 @@ body {
     text-align: justify;
     font-family: 'Comfortaa', sans-serif;
     font-size: smaller;
-/* 3.7: Перенос текста комментария */
+/* 3.7: РџРµСЂРµРЅРѕСЃ С‚РµРєСЃС‚Р° РєРѕРјРјРµРЅС‚Р°СЂРёСЏ */
     word-wrap: break-word;
 }
-/* 3.9: Хвостик к облаку */
+/* 3.9: РҐРІРѕСЃС‚РёРє Рє РѕР±Р»Р°РєСѓ */
 /*.comment-pointer {
     position: absolute;
     height: 0;
