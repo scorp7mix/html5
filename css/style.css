@@ -1,0 +1,162 @@
+body {
+    width: 720px;
+    margin: 20px auto;
+}
+/* 1: Подгружаемый шрифт */
+@font-face {
+    font-family: 'Good Vibes Pro';
+    src: url('../fonts/GoodVibesPro/GoodVibesPro.eot');
+    src: url('../fonts/GoodVibesPro/GoodVibesPro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GoodVibesPro/GoodVibesPro.woff') format('woff'),
+    url('../fonts/GoodVibesPro/GoodVibesPro.ttf') format('truetype'),
+    url('../fonts/GoodVibesPro/GoodVibesPro.svg#GoodVibesPro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.page-header {
+    font-family: 'Good Vibes Pro', sans-serif;
+    font-size: 60px;
+    text-align: center;
+}
+/* 2.1: Колонки */
+.article-cols {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-rule: 1px dotted #aaa;
+    -moz-column-rule: 1px dotted #aaa;
+    column-rule: 1px dotted #aaa;
+
+    -webkit-column-gap: 3em;
+    -moz-column-gap: 3em;
+    column-gap: 3em;
+
+    text-align: justify;
+}
+.article-figure {
+    width: 80%;
+    margin: 1em auto;
+}
+.article-figure-img {
+    width: 100%;
+}
+/* 2.2: Кавычки */
+.article-aside {
+    position: relative;
+    box-sizing: border-box;
+    padding: 5px 50px 10px;
+    border: 1px solid #ccc;
+    font-size: smaller;
+}
+.quote {
+    position: absolute;
+    width: 20px;
+    height: 16px;
+}
+.quote-left {
+    top: 5px;
+    left: 5px;
+}
+.quote-right {
+    bottom: 5px;
+    right: 5px;
+}
+/* 3 Комментарии */
+.comment {
+    position: relative;
+    width: 95%;
+    box-sizing: border-box;
+    margin: -10px auto 0;
+    padding: 25px 25px 10px 110px;
+}
+.comment-number {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+.comment-avatar {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 25px;
+    left: 0;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+}
+.comment-cloud {
+    position: relative;
+    box-sizing: border-box;
+    padding: 25px 15px 1px;
+/* 3.1: Скруглить углы */
+    border-radius: 10px;
+/* 3.2: Полупрозрачный фон */
+    background-color: hsla(60, 50%, 50%, .5);
+/* 3.3: Градиент */
+    background-image: -webkit-linear-gradient(to top, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, 0) 50%);
+    background-image: linear-gradient(to top, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, 0) 50%);
+/* 3.4: Тень облака */
+    box-shadow: 5px 5px 5px hsl(60, 50%, 20%);
+}
+.comment-cloud:hover {
+/* 3.5: Тень текста при наведении */
+    text-shadow: 1px 1px 1px hsl(60, 50%, 20%);
+/* 3.6: Перемещение при наведении */
+    top: -2px;
+    left: -2px;
+    box-shadow: 7px 7px 5px hsl(60, 50%, 20%);
+}
+/* 3.8: Фон четных комментариев */
+.comment:nth-of-type(even) .comment-cloud {
+    background-color: hsla(60, 50%, 35%, .5);
+}
+.comment-time {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: smaller;
+    font-style: italic;
+}
+.comment-author {
+    position: absolute;
+    margin-top: 0;
+    top: 15px;
+    left: 15px;
+    font-weight: bold;
+}
+.comment-text {
+    padding: 0 7px;
+    text-align: justify;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: smaller;
+/* 3.7: Перенос текста комментария */
+    word-wrap: break-word;
+}
+/* 3.9: Хвостик к облаку */
+/*.comment-pointer {
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 20px;
+    left: -40px;
+    border: 20px solid transparent;
+    border-right-color: hsla(60, 50%, 50%, .5);
+}*/
+.comment-array {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    top: 10px;
+    left: -20px;
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+    background-image: -webkit-radial-gradient(circle at 0 20px, transparent, transparent 19px, hsla(60, 50%, 50%, .5) 20px, hsla(60, 50%, 50%, .5));
+    background-image: radial-gradient(circle at 0 20px, transparent, transparent 19px, hsla(60, 50%, 50%, .5) 20px, hsla(60, 50%, 50%, .5));
+    background-position: 0 -20px;
+    background-repeat: repeat-y;
+}
+.comment:nth-of-type(even) .comment-array {
+    background-image: -webkit-radial-gradient(circle at 0 20px, transparent, transparent 19px, hsla(60, 50%, 35%, .5) 20px, hsla(60, 50%, 35%, .5));
+    background-image: radial-gradient(circle at 0 20px, transparent, transparent 19px, hsla(60, 50%, 35%, .5) 20px, hsla(60, 50%, 35%, .5));
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 50px 0;
+            width: 100%;
+            background: url('./album/bg.jpg');
+        }
+
+        .album {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        .album:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        /* #2 оформление изображений */
+        .album-item {
+            position: relative;
+            float: left;
+            width: 270px;
+            height: 300px;
+            margin: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+            -webkit-transition: 1.5s ease;
+            transition: 1.5s ease;
+        }
+
+        /* #3 придать небольшую хаотичность изображениям */
+        .album-item:nth-child(4n) {
+            -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+            left: -5px;
+        }
+
+        .album-item:nth-child(4n+1) {
+            -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+            top: -5px;
+        }
+
+        .album-item:nth-child(4n+2) {
+            -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+            left: 5px;
+        }
+
+        .album-item:nth-child(4n+4) {
+            -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+            top: 5px;
+        }
+
+        /* #4 при наведении */
+        .album-item:hover {
+            -webkit-transform: rotate(0deg) scale(1.5);
+            transform: rotate(0deg) scale(1.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+            z-index: 10;
+        }
+
+        .album-item-image {
+            width: 250px;
+            height: 250px;
+        }
+
+        /* #5 выезжающее описание к фотографии */
+        .album-item-description {
+            position: absolute;
+            width: 250px;
+            max-height: 0;
+            overflow: hidden;
+            bottom: 40px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0 10px;
+            text-align: justify;
+            background: rgba(0, 0, 0, .5);
+            color: #cccccc;
+            font-size: 0.65em;
+        }
+
+        .album-item:hover .album-item-description {
+            max-height: 200px;
+            -webkit-transition: 2s ease-in-out 1.2s;
+            transition: 2s ease-in-out 1.2s;
+        }
+
+        .album-item-caption {
+            line-height: 30px;
+            font-weight: bold;
+            font-family: Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="album">
+    <!-- /* #1 9 изображений с подписью */ -->
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img1.jpg">
+
+        <p class="album-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deserunt
+            dignissimos doloremque fuga quisquam temporibus veritatis?</p>
+        <figcaption class="album-item-caption">Image #1</figcaption>
+    </figure>
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img2.jpg">
+
+        <p class="album-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <figcaption class="album-item-caption">Image #2</figcaption>
+    </figure>
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img3.jpg">
+
+        <p class="album-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deserunt
+            dignissimos doloremque fuga quisquam temporibus veritatis? Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.</p>
+        <figcaption class="album-item-caption">Image #3</figcaption>
+    </figure>
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img4.jpg">
+
+        <p class="album-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deserunt
+            dignissimos doloremque fuga quisquam temporibus veritatis? Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Culpa deserunt dignissimos doloremque fuga quisquam temporibus veritatis?</p>
+        <figcaption class="album-item-caption">Image #4</figcaption>
+    </figure>
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img5.jpg">
+
+        <p class="album-item-description">Lorem.</p>
+        <figcaption class="album-item-caption">Image #5</figcaption>
+    </figure>
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img6.jpg">
+
+        <p class="album-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deserunt
+            dignissimos doloremque fuga quisquam temporibus veritatis?</p>
+        <figcaption class="album-item-caption">Image #6</figcaption>
+    </figure>
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img7.jpg">
+
+        <p class="album-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deserunt
+            dignissimos doloremque fuga quisquam temporibus veritatis?</p>
+        <figcaption class="album-item-caption">Image #7</figcaption>
+    </figure>
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img8.jpg">
+
+        <p class="album-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deserunt
+            dignissimos doloremque fuga quisquam temporibus veritatis?</p>
+        <figcaption class="album-item-caption">Image #8</figcaption>
+    </figure>
+    <figure class="album-item">
+        <img class="album-item-image" src="./album/img9.jpg">
+
+        <p class="album-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deserunt
+            dignissimos doloremque fuga quisquam temporibus veritatis?</p>
+        <figcaption class="album-item-caption">Image #9</figcaption>
+    </figure>
+</div>
+</body>
+</html>

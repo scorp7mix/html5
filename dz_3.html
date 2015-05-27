@@ -3,40 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Авто блог</title>
-    <link href='http://fonts.googleapis.com/css?family=Comfortaa:700&subset=cyrillic,cyrillic-ext,latin' rel='stylesheet' type='text/css'>
-    <style>
-        body {
-            width: 720px;
-            margin: 20px auto;
-        }
-        .page-header {
-            font-family: 'Comfortaa';
-            font-size: 45px;
-            text-align: center;
-        }
-        .article-cols {
-            -webkit-column-count: 2;
-            -moz-column-count: 2;
-            column-count: 2;
-
-            -webkit-column-rule: 1px dotted #aaa;
-            -moz-column-rule: 1px dotted #aaa;
-            column-rule: 1px dotted #aaa;
-
-            -webkit-column-gap: 5em;
-            -moz-column-gap: 5em;
-            column-gap: 5em;
-
-            text-align: justify;
-        }
-        .article-figure {
-            width: 80%;
-            margin: 1em auto;
-        }
-        .article-figure-img {
-            width: 100%;
-        }
-    </style>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:700&subset=cyrillic,cyrillic-ext,latin'
+          rel='stylesheet' type='text/css'>
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 <!-- Шапка -->
@@ -81,39 +50,48 @@
 <!-- Основной контент -->
 <main role="main">
     <!-- Статья -->
-    <article >
+    <article>
         <header>
             <h2>Volvo увеличит выпуск XC90 в Швеции вслед за ростом заказов</h2>
-            <p>Опубликовано<time datetime="2015-05-13T21:00:00.001+03:00"> 13 мая, 21:00 МСК</time></p>
+
+            <p>Опубликовано
+                <time datetime="2015-05-13T21:00:00.001+03:00"> 13 мая, 21:00 МСК</time>
+            </p>
         </header>
 
-        <div class="article-cols">
-        <p>Шведский автопроизводитель Volvo Cars на фоне роста заказов на новое поколение модели Volvo XC90 увеличивает
-            объемы производства. Компания в начале мая запустила третью производственную смену и приняла на работу еще
-            1500 рабочих. Ранее на заводе планировалось трудоустроить дополнительно только 1300 рабочих. Volvo Cars
-            собрала почти 30 тыс. заказов на поставки XC90, при этом в 2015 году планируется собрать всего 50 тыс. новых
-            XC90.</p>
+        <section class="article-cols">
+            <p>Шведский автопроизводитель Volvo Cars на фоне роста заказов на новое поколение модели Volvo XC90
+                увеличивает
+                объемы производства. Компания в начале мая запустила третью производственную смену и приняла на работу
+                еще
+                1500 рабочих. Ранее на заводе планировалось трудоустроить дополнительно только 1300 рабочих. Volvo Cars
+                собрала почти 30 тыс. заказов на поставки XC90, при этом в 2015 году планируется собрать всего 50 тыс.
+                новых
+                XC90.</p>
 
-        <p>Основную часть продукции направят покупателям в США и Китай, сообщил автопроизводитель. Кроме того, новые
-            рабочие места будут созданы на смежных предприятиях в Гетеборге и других городах Швеции. «Рынок с
-            восхищением принял наш новый XC90. Мы смогли предложить работу 1500 новым рабочим на заводе в Торсланде, где
-            будет производиться наша новая модель», — сказал президент и генеральный директор Volvo Cars Хокан
-            Самуэльссон.</p>
-        </div>
+            <p>Основную часть продукции направят покупателям в США и Китай, сообщил автопроизводитель. Кроме того, новые
+                рабочие места будут созданы на смежных предприятиях в Гетеборге и других городах Швеции. «Рынок с
+                восхищением принял наш новый XC90. Мы смогли предложить работу 1500 новым рабочим на заводе в Торсланде,
+                где
+                будет производиться наша новая модель», — сказал президент и генеральный директор Volvo Cars Хокан
+                Самуэльссон.</p>
+        </section>
 
         <figure class="article-figure">
-            <img class="article-figure-img" src="./volvo_xc_90.jpg" alt="Volvo XC 90">
+            <img class="article-figure-img" src="./img/volvo_xc_90.jpg" alt="Volvo XC 90">
             <figcaption>Тестирование нового Volvo XC 90</figcaption>
         </figure>
 
-        <div class="article-cols">
-        <p>Новое поколение Volvo XC90 создано на масштабируемой платформе SPA шведской компании. Новая платформа будет
-            использоваться и для создания других моделей Volvo. Завод в Торсланде, мощности которого после
-            дополнительных инвестиций позволяют собирать до 300 тыс. автомобилей ежегодно, будет производить несколько
-            новых моделей на платформе SPA.</p>
+        <section class="article-cols">
+            <p>Новое поколение Volvo XC90 создано на масштабируемой платформе SPA шведской компании. Новая платформа
+                будет
+                использоваться и для создания других моделей Volvo. Завод в Торсланде, мощности которого после
+                дополнительных инвестиций позволяют собирать до 300 тыс. автомобилей ежегодно, будет производить
+                несколько
+                новых моделей на платформе SPA.</p>
 
-        <p>Предприятие в Торсланде также выпускает S60, S80, V60, V70 и XC70.</p>
-        </div>
+            <p>Предприятие в Торсланде также выпускает S60, S80, V60, V70 и XC70.</p>
+        </section>
 
         <footer>
             <p><strong>Автор:</strong> Алексей Захаров</p>
@@ -125,7 +103,7 @@
             </p>
         </footer>
 
-        <aside>
+        <aside class="article-aside">
             <header>
                 <h3>Смотрите также:</h3>
             </header>
@@ -134,23 +112,45 @@
                 <li><a href="#">УАЗ планирует продать 49 тысяч автомобилей в этом году</a></li>
                 <li><a href="#">Поведение в стрессовых ситуациях(ДТП)</a></li>
             </ul>
+            <img class="quote quote-left" src="./img/quote-left.jpg">
+            <img class="quote quote-right" src="./img/quote-right.jpg">
         </aside>
         <!-- Комментарии -->
         <h2>Комментарии</h2>
 
-        <article>
+        <article class="comment">
             <header>
-                <h3>Комментарий 1 / Автор: Любитель</h3>
-                <time datetime="2015-05-13T21:30:00.001+03:00"> 13 мая, 21:30</time>
+                <h3 class="comment-number">#1</h3>
+                <img class="comment-avatar" src="./img/default-avatar.png">
             </header>
-            <p>Текст комментария</p>
+            <div class="comment-cloud">
+                <time class="comment-time" datetime="2015-05-13T21:30:00.001+03:00"> 13 мая, 21:30</time>
+                <p class="comment-author">Любитель</p>
+
+                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto
+                    blanditiis consequatur corporis deserunt dolorum ducimus esse eum ipsam labore laudantium maiores
+                    nulla porro praesentium reiciendis sapiente, veritatis. Accusamus, laborum!</p>
+                <!--div class="comment-pointer"></div-->
+                <div class="comment-array"></div>
+            </div>
         </article>
-        <article>
+        <article class="comment">
             <header>
-                <h3>Комментарий 2 / Автор: Эксперт</h3>
-                <time datetime="2015-05-13T22:30:00.001+03:00"> 13 мая, 22:30</time>
+                <h3 class="comment-number">#2</h3>
+                <img class="comment-avatar" src="./img/avatar1.png">
             </header>
-            <p>Текст комментария</p>
+            <div class="comment-cloud">
+                <time class="comment-time" datetime="2015-05-13T22:30:00.001+03:00"> 13 мая, 22:30</time>
+                <p class="comment-author">Эксперт</p>
+
+                <p class="comment-text">
+                    Loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                    ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                    aliquam aut cupiditate eveniet molestiae necessitatibus numquam possimus provident quia quo tempora
+                    vero voluptates? Iusto laudantium maiores non odit quaerat!</p>
+                <!--div class="comment-pointer"></div-->
+                <div class="comment-array"></div>
+            </div>
         </article>
     </article>
 </main>
