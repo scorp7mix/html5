@@ -99,14 +99,14 @@ textarea {
     width: 95%;
     margin: 0 auto;
 }
-/* Шапка */
+/* РЁР°РїРєР° */
 .page-header {
     float: left;
     width: 100%;
     height: 100px;
     margin: 0 0 20px;
 }
-/* Логотип */
+/* Р›РѕРіРѕС‚РёРї */
 .page-logo {
     float: left;
     width: 22%;
@@ -115,7 +115,7 @@ textarea {
     background: url('../img/logo.jpg') center center no-repeat;
     background-size: contain;
 }
-/* Меню */
+/* РњРµРЅСЋ */
 .page-menu {
     float: left;
     width: 75%;
@@ -144,7 +144,7 @@ textarea {
 .menu-list-link:visited {
     color: #222;
 }
-/* Главный контент */
+/* Р“Р»Р°РІРЅС‹Р№ РєРѕРЅС‚РµРЅС‚ */
 .page-main {
     float: left;
     box-sizing: border-box;
@@ -179,7 +179,7 @@ textarea {
 .main-article-cols {
     text-align: justify;
 }
-/* Боковая колонка */
+/* Р‘РѕРєРѕРІР°СЏ РєРѕР»РѕРЅРєР° */
 .page-aside {
     float: left;
     width: 20%;
@@ -216,7 +216,7 @@ textarea {
 .aside-list-link:before {
     content: '> ';
 }
-/* Форма поиска */
+/* Р¤РѕСЂРјР° РїРѕРёСЃРєР° */
 .search-form {
     margin-top: 20px;
 }
@@ -240,7 +240,7 @@ textarea {
     background: buttonface url('../img/find.png') center center no-repeat;
     background-size: 23px 23px;
 }
-/* Подвал */
+/* РџРѕРґРІР°Р» */
 .page-footer {
     display: table;
     float: left;

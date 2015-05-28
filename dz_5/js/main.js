@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // Обработчик placeholder
+    // РћР±СЂР°Р±РѕС‚С‡РёРє placeholder
     if(!Modernizr.input.placeholder) {
         $('input[type=search]').focus(function() {
             var input = $(this);
