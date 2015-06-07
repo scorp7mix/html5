@@ -1,0 +1,24 @@
+.navbar-right {
+    margin: 8px 10px;
+    border: none;
+}
+/*
+.navbar-default .navbar-form .form-group {
+  display: inline-block;
+}
+.navbar-default .navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+.navbar-default .navbar-toggle {
+  margin: 5px 15px 5px 0;
+}
+*/
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
+}

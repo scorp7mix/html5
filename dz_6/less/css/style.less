@@ -1,0 +1,60 @@
+/* ======= WINLESS COMPILER ======= */
+
+.custom-box-shadow(@hoff, @voff, @blur, @color) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+.custom-transform-rotate(@angle) {
+  -webkit-transform: rotate(@angle);
+  -moz-transform: rotate(@angle);
+  -ms-transform: rotate(@angle);
+  -o-transform: rotate(@angle);
+  transform: rotate(@angle);
+}
+.custom-transform-scale(@sc) {
+  -webkit-transform: scale(@sc, @sc);
+  -moz-transform: scale(@sc, @sc);
+  -ms-transform: scale(@sc, @sc);
+  -o-transform: scale(@sc, @sc);
+  transform: scale(@sc, @sc);
+}
+.custom-transition-transform(@time, @effect, @delay) {
+  -webkit-transition: -webkit-transform @arguments;
+  -moz-transition: -moz-transform @arguments;
+  -ms-transition: -ms-transform @arguments;
+  -o-transition: -o-transform @arguments;
+  transition: transform @arguments;
+}
+
+.sticker(@color, @size, @angle, @hover-scale: 1.2) {
+
+  float: left;
+  width: @size;
+  height: @size;
+  margin: @size * (@hover-scale - 1);
+  padding: @size * .1;
+
+  line-height: @size * .9;
+  text-align: center;
+
+  background-color: @color;
+  .custom-box-shadow(3px, 3px, 5px, hsla(0, 0, 0, .9) );
+  .custom-transform-rotate(@angle);
+  .custom-transition-transform(.5s, ease, 0s);
+
+  &:hover {
+    .custom-transform-scale(@hover-scale);
+    z-index: 10;
+  }
+}
+
+.sticker1 {
+  .sticker(hsl(60, 50%, 75%), 150px, 3deg);
+}
+.sticker2 {
+  .sticker(hsl(120, 50%, 75%), 200px, 15deg);
+}
+.sticker3 {
+  .sticker(hsl(180, 50%, 75%), 125px, -5deg);
+}

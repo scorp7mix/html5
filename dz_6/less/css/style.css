@@ -1,0 +1,94 @@
+/* ======= WINLESS COMPILER ======= */
+.sticker1 {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+  padding: 15px;
+  line-height: 135px;
+  text-align: center;
+  background-color: #dfdf9f;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  -moz-transition: -moz-transform 0.5s ease 0s;
+  -ms-transition: -ms-transform 0.5s ease 0s;
+  -o-transition: -o-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+}
+.sticker1:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  z-index: 10;
+}
+.sticker2 {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 40px;
+  padding: 20px;
+  line-height: 180px;
+  text-align: center;
+  background-color: #9fdf9f;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  -moz-transition: -moz-transform 0.5s ease 0s;
+  -ms-transition: -ms-transform 0.5s ease 0s;
+  -o-transition: -o-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+}
+.sticker2:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  z-index: 10;
+}
+.sticker3 {
+  float: left;
+  width: 125px;
+  height: 125px;
+  margin: 25px;
+  padding: 12.5px;
+  line-height: 112.5px;
+  text-align: center;
+  background-color: #9fdfdf;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  -moz-transition: -moz-transform 0.5s ease 0s;
+  -ms-transition: -ms-transform 0.5s ease 0s;
+  -o-transition: -o-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+}
+.sticker3:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  z-index: 10;
+}
