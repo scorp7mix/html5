@@ -17,7 +17,7 @@ $(document).ready(function() {
                 newNote.append($('<div class="col-xs-1 note-id">' + noteId + '</div>'));
                 newNote.append($('<div class="col-xs-10 note-text">' + noteText + '</div>'));
                 newNote.append($('<div class="col-xs-1"><button type="button" class="close note-del">&times;</button></div>'));
-                if(i != l) newNote.append($('<hr/><hr/>'));
+                if(i != l) newNote.append($('<div class="col-xs-12"><hr></div>'));
                 notes.append(newNote);
             }
             noteId = false;

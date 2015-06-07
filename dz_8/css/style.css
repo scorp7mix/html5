@@ -2,19 +2,11 @@
     margin: 8px 10px;
     border: none;
 }
-/*
-.navbar-default .navbar-form .form-group {
-  display: inline-block;
+
+.form-control[disabled] {
+    cursor: default;
 }
-.navbar-default .navbar-form .form-control {
-  display: inline-block;
-  width: auto;
-  vertical-align: middle;
-}
-.navbar-default .navbar-toggle {
-  margin: 5px 15px 5px 0;
-}
-*/
+
 footer {
   margin-top: 20px;
   padding: 10px;
