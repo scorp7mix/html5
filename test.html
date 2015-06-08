@@ -4,6 +4,163 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-weight: normal;
+        }
+        html {
+            background-color: #fff;
+        }
+        body {
+            margin: 0 auto;
+            font-family: Arial,sans-serif;
+            font-size: 62.5%;
+            color: #444444;
+        }
+        .container {
+            position: relative;
+            margin: 100px auto 0 auto;
+            width: 600px;
+            height: 600px;
+            border: solid 1px #dddddd;
+        }
+        .arrow {
+            position: absolute;
+            background: rgba(0, 0, 0, .3);
+            transition: all 1s ease;
+        }
+        .arrow:hover {
+            position: absolute;
+            background: rgba(255, 0, 0, .7);
+        }
+        .a-top {
+            top: -50px;
+            left: 0;
+            right: 0;
+            min-width: 600px;
+            height: 50px;
+            border-radius: 50px 50px 0 0;
+        }
+        .a-bottom {
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            min-width: 600px;
+            height: 50px;
+            border-radius: 0 0 50px 50px;
+        }
+        .a-left {
+            left: -50px;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            border-radius: 50px 0 0 50px;
+        }
+        .a-right {
+            right: -50px;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            border-radius: 0 50px 50px 0;
+        }
+        .cube {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -100px 0 0 -100px;
+            width: 200px;
+            height: 200px;
+            transition: all 1s ease;
+            transform-style: preserve-3d;
+            transform-origin: 50% 50%;
+            transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
+        }
+        .a-top:hover ~ .cube {
+            transform: perspective(900px) rotate3d(180, -45, 0, -135deg);
+        }
+        .a-bottom:hover ~ .cube {
+            transform: perspective(900px) rotate3d(180, -45, 0, 135deg);
+        }
+        .a-left:hover ~ .cube {
+            transform: perspective(900px) rotate3d(55, 180, 0, -219deg);
+        }
+        .a-right:hover ~ .cube {
+            transform: perspective(900px) rotate3d(-45, 180, 0, 135deg);
+        }
+        .cube span {
+            position: absolute;
+            display: block;
+            width: 200px;
+            height: 200px;
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, .3),
+                        inset -30px -30px 80px rgba(0, 0, 0, .3);
+        }
+        .cube .n1{
+            top: 0;
+            left: 0;
+            background-color: #d00;
+            opacity: .9;
+            transform: translate3d(0,0,100px);
+        }
+        .cube .n2{
+            top: 0;
+            left: 100%;
+            background-color: #dd0;
+            opacity: .9;
+            transform-origin: 0 0;
+            transform: translate3d(0,0,100px) rotate3d(0,1,0,90deg);
+        }
+        .cube .n3{
+            top: 100%;
+            left: 0;
+            background-color: #999;
+            opacity: .9;
+            transform-origin: 0 0;
+            transform: translate3d(0,0,100px) rotate3d(1,0,0,-90deg);
+        }
+        .cube .n4{
+            top: 0;
+            right: 100%;
+            background-color: #04d;
+            opacity: .9;
+            transform-origin: 100% 0;
+            transform: translate3d(0,0,100px) rotate3d(0,1,0,-90deg);
+        }
+        .cube .n5{
+            bottom: 100%;
+            left: 0;
+            background-color: #0dd;
+            opacity: .9;
+            transform-origin: 0 100%;
+            transform: translate3d(0,0,100px) rotate3d(1,0,0,90deg);
+        }
+        .cube .n6{
+            top: 0;
+            left: 0;
+            background-color: #6a0;
+            opacity: .9;
+            transform-origin: 0 50%;
+            transform: translate3d(0,0,-100px) rotate3d(1,0,0,180deg);
+        }
+        .cube b {
+            position: absolute;
+            margin: -10px 0 0 -10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: inset -3px -3px 5px rgba(0,0,0,.3);
+            opacity: .9;
+        }
+        .cube .d-25-25 { top: 25%; left: 25% }
+        .cube .d-25-75 { top: 25%; left: 75% }
+        .cube .d-50-25 { top: 50%; left: 25% }
+        .cube .d-50-75 { top: 50%; left: 75% }
+        .cube .d-50-50 { top: 50%; left: 50% }
+        .cube .d-75-25 { top: 75%; left: 25% }
+        .cube .d-75-75 { top: 75%; left: 75% }
     </style>
 </head>
 <body>
@@ -15,22 +172,37 @@
 
         <div class="cube">
             <span class="n1">
-
+                <b class="d-50-50"></b>
             </span>
             <span class="n2">
-
+                <b class="d-25-75"></b>
+                <b class="d-75-25"></b>
             </span>
             <span class="n3">
-
+                <b class="d-25-25"></b>
+                <b class="d-50-50"></b>
+                <b class="d-75-75"></b>
             </span>
             <span class="n4">
-
+                <b class="d-25-25"></b>
+                <b class="d-25-75"></b>
+                <b class="d-75-25"></b>
+                <b class="d-75-75"></b>
             </span>
             <span class="n5">
-
+                <b class="d-25-25"></b>
+                <b class="d-25-75"></b>
+                <b class="d-50-50"></b>
+                <b class="d-75-25"></b>
+                <b class="d-75-75"></b>
             </span>
             <span class="n6">
-
+                <b class="d-25-25"></b>
+                <b class="d-25-75"></b>
+                <b class="d-50-25"></b>
+                <b class="d-50-75"></b>
+                <b class="d-75-25"></b>
+                <b class="d-75-75"></b>
             </span>
         </div>
     </div>

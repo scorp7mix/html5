@@ -1,0 +1,71 @@
+/* Вы можете импортировать файлы .less, при этом все переменные и примеси в них становятся доступными в главном файле.*/
+@import "2_mixins.less";
+
+/* Используем примеси из файла 2_mixins.less */
+aside {
+	.border-radius(10px); 
+	.box-shadow(0px, 0px, 2px, rgba(0, 0, 0, 0.3));
+}
+
+
+/* Совпадение с шаблоном */
+.sideblock(left, @color) {
+	float: left;
+	margin: 0 20px 10px 0;
+}
+.sideblock(right, @color) {
+	float: right;
+	margin: 0 0 10px 2	0px;
+}
+.sideblock(@_, @color) {
+	padding: 1px 20px;
+	color: @color;	
+}
+
+aside {
+	.sideblock(right, #333333);
+}
+
+/* Или через переменную */
+@float: right;
+
+aside {
+	.sideblock(@float, #333333);
+}
+
+/* Мы можем также сравнивать количество параметров примеси, например: */
+.background(@color) {
+	background-color:@color;
+}
+.background(@color1, @color2) {
+	background: -moz-linear-gradient(top, @color1, @color2);
+}
+
+/* Вызов первой примеси */
+aside {
+	.background(hsla(0, 10%, 90%, 0.5));
+}
+/* Вызов второй примеси */
+aside {
+	.background(hsla(0, 10%, 90%, 0.1), hsla(0, 10%, 90%, 1));
+}
+
+
+
+
+
+
+/* Обычные стили для новых элементов */
+
+aside pre {
+	font-size: 11px;	
+}
+.content {
+	overflow:hidden;
+}
+footer {
+	text-align: center;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	font-size: 90%;
+}

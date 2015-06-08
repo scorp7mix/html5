@@ -1,0 +1,72 @@
+/* Импортируем базовые стили для кнопок */
+@import "4_guards.less";
+
+@base_height: 100px; /* Базовая высота кнопки */
+@base_radius: 10px; /* Радиус при height == 100px */
+@base_bg: #333333;
+@base_font_size: 25pt;
+@base_border_width: 3px;
+
+.button(@width, @height) {
+	@prop: @height/@base_height;
+	.border-radius(@base_radius*@prop);
+
+	@background_color: @base_bg * 2*@prop;
+	background-color: @background_color;
+
+	font-size: (@base_font_size + 5) * @prop; /* Скобки также разрешены в операциях */
+	
+	width: @width;
+	height: @height;
+	line-height: @height;
+
+	&:hover { background-color: lighten(@background_color, 5%); }
+	&:active { background-color: darken(@background_color, 10%); }
+
+	display:block;
+	margin: 20px;
+	text-align: center;
+	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+	text-decoration: none;
+	font-weight: bold;	
+	color: white;
+	.box-shadow(2px 2px 2px, 30%); /* вызовет вторую примесь */
+}
+
+.button1 {
+	.button(200px, 50px);
+}
+.button2 {
+	.button(250px, 100px);	
+}
+.button3 {
+	.button(300px, 150px);
+}
+
+
+/* Функции работы с цветом 
+
+lighten(@color, 10%);     // возвращает цвет, который на 10% *светлее*, чем @color
+darken(@color, 10%);      // возвращает цвет, который на 10% *темнее*, чем @color
+
+saturate(@color, 10%);    // возвращает цвет, на 10% *более* насыщенный, чем @color
+desaturate(@color, 10%);  // возвращает цвет, на 10% *менее* насыщенный, чем @color
+
+fadein(@color, 10%);      // возвращает цвет, на 10% *менее* прозрачный, чем @color
+fadeout(@color, 10%);     // возвращает цвет, на 10% *более* прозрачный, чем @color
+
+spin(@color, 10);         // возвращает цвет, на 10 градусов больший по оттенку, чем @color
+spin(@color, -10);        // возвращает цвет, на 10 градусов меньший по оттенку, чем @color
+
+hue(@color);        // возвращает канал тона (`hue`) в указанном @color
+saturation(@color); // возвращает канал насыщенности (`saturation`) в указанном @color
+lightness(@color);  // возвращает канал светлоты (`lightness`) в указанном @color
+*/
+
+/* Математические функции
+
+round(1.67); // вернет `2`
+ceil(2.4);   // вернет `3`
+floor(2.6);  // вернет `2`
+percentage(0.5); // вернет `50%`
+*/

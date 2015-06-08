@@ -1,0 +1,58 @@
+/* Вложенные правила */
+/* LESS дает возможность вкладывать определения */
+
+header {
+	text-align: center;
+	hgroup {
+		h1 {
+			font-size: 40px;
+		}
+		h2 {
+			font-size: 20px;
+		}
+		h1, h2 {
+			margin: 0;
+		}
+	}
+	nav {
+		margin-top: 10px; border:1px solid #000; border-radius: 10px;		
+		ul {
+			padding: 10px 0; margin: 0;
+			li {
+				margin: 0 10px; list-style-type: none; display:inline-block;
+				a {
+					color: green;
+					&:hover {
+						text-decoration:none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Тоже самое можно записать вот так: */
+
+header { text-align: center;
+	hgroup {
+		h1 { font-size: 40px; }
+		h2 { font-size: 20px; }
+		h1, h2 { margin: 0; }
+	}
+	nav { margin-top: 10px; border:1px solid #000; border-radius: 10px;		
+		ul { padding: 10px 0; margin: 0;
+			li { margin: 0 10px; list-style-type: none; display:inline-block;
+				a { color: green;
+					&:hover { text-decoration:none; }
+				}
+			}
+		}
+	}
+}
+
+
+/* Элемент "&" используется, когда указанный селектор нужно приписать к селекторe-родителю, 
+а не использовать как вложенный элемент. Это особенно удобно для псевдо-классов типа :hover или :focus. */
+
+
+

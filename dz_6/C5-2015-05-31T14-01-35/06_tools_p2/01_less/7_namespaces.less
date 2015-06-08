@@ -1,0 +1,48 @@
+/* Импортируем базовые стили для кнопок */
+@import "4_guards.less";
+
+
+/* Пространство имен #lib */
+#lib {
+	@base_height: 100px; /* Базовая высота кнопки */
+	@base_radius: 10px; /* Радиус при height == 100px */
+	@base_bg: #333333;
+	@base_font_size: 25pt;
+	@base_border_width: 3px;
+	
+	.button(@width, @height) {
+		@prop: @height/@base_height;
+		.border-radius(@base_radius*@prop);
+
+		@background_color: @base_bg * 2*@prop;
+		background-color: @background_color;
+
+		font-size: (@base_font_size + 5) * @prop; /* Скобки также разрешены в операциях */
+	
+		width: @width;
+		height: @height;
+		line-height: @height;
+
+		&:hover { background-color: lighten(@background_color, 5%); }
+		&:active { background-color: darken(@background_color, 10%); }
+
+		display:block;
+		margin: 20px;
+		text-align: center;
+		font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+		text-decoration: none;
+		font-weight: bold;	
+		color: white;
+		.box-shadow(2px 2px 2px, 30%); /* вызовет вторую примесь */
+	}
+}
+
+.button1 {
+	#lib > .button(200px, 50px);
+}
+.button2 {
+	#lib > .button(250px, 100px);	
+}
+.button3 {
+	#lib > .button(300px, 150px);
+}

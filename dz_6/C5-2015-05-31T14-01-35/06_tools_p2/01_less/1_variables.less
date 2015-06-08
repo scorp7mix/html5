@@ -1,0 +1,33 @@
+/*  Объявление переменных */
+@body_bg_color: #E6F0FF; /* Цвет основного фона */
+@header_color: black; /* Цвет заголовков */
+
+/* Воспользуемся переменными */
+body {
+	background-color: @body_bg_color;
+	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+h1 {
+	color: @header_color;
+	font-size: 30pt;
+}
+h2 {
+	color: @header_color;
+	font-size: 20pt;
+}
+
+/* Переменные могут быть включены внутрь строк, как в ruby или в PHP, при помощи конструкции @{name}: */
+@images_folder: "media/images";
+
+body {
+	background-image: url("@{images_folder}/background.png");
+}
+
+/* Можно также определять переменную, ссылаясь на другую переменную по ее имени: */
+@dark: #333333;
+@light: #616263;
+
+@var: 'dark';
+p {
+	color: @@var;
+}

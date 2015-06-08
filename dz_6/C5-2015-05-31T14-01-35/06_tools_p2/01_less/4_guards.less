@@ -1,0 +1,79 @@
+/* Вы можете импортировать файлы .less, при этом все переменные и примеси в них становятся доступными в главном файле.*/
+@import "2_mixins.less";
+
+/* Предохранительные выражения */
+.button(@color) when (lightness(@color) >= 50) {
+	color: black;
+}
+.button(@color) when (lightness(@color) < 50) {
+	color: white;
+}
+
+/* определим стиль кнопки */
+.button(@color) {
+	background-color:@color;
+	.border-radius(20px); /* Используем примесь из файла 2_mixins.less */
+	display:block;
+	width: 300px;
+	height: 100px;
+	margin: 20px;
+	text-align: center;
+	line-height: 100px;
+	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+	font-size: 35px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.button.dark {
+	.button(#333333);
+}
+.button.light {
+	.button(#DDDDDD);	
+}
+
+/* Предохранители могут разделяться запятыми ‘,’ — если однин из них срабатывает, весь набор считается совпадшим: 
+.mixin (@a) when (@a > 10), (@a < -10) { ... } */
+
+
+/* Если Вы хотите сравнивать примешивания по типу значения, Вы можете использовать функции вида is: */
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  box-shadow:         @style @c;
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+}
+.box-shadow(@style, @alpha) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.button(@color) { 
+  .box-shadow(4px 4px 2px, hsla(180, 50%, 50%, 0.5)); /* вызовет первую примесь */
+  .box-shadow(2px 2px 2px, 30%); /* вызовет вторую примесь */
+}
+
+/* Функции для сравнения основных типов:
+iscolor
+isnumber
+isstring
+iskeyword
+isurl */
+
+/* Если необходимо проверить, чтобы величина была не только числом, но и имела бы значение определенного типа:
+ispixel
+ispercentage
+isem */
+
+
+
+/* Можно использовать ключевое слово and для указания дополнительных условий, например:
+.mixin (@a) when (isnumber(@a)) and (@a > 0) { ... } */
+
+/* И ключевое слово not для отрицания условия:
+.mixin (@b) when not (@b > 0) { ... } */
+
+
+
+
+
+
+
