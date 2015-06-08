@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic);
+
+body {
+    color: #333;
+}
+
+.navbar-right {
+    margin: 8px 10px;
+    border: none;
+}
+
+.form-control[disabled] {
+    cursor: default;
+}
+
+.note {
+    margin: -1px 0 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+.note-text {
+    font-family: 'Marck Script', cursive;
+    font-size: 1.2em;
+    word-break: break-all;
+}
+
+#note-edit {
+    margin-top: 30px;
+}
+#note-edit textarea {
+    font-family: 'Marck Script', cursive;
+    font-size: 1.2em;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
+}

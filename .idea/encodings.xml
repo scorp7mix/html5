@@ -2,8 +2,12 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/css/style.css" charset="UTF-8" />
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/dz_5/css/main.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dz_5/css/normalize.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dz_5/js/main.js" charset="UTF-8" />
+=======
+    <file url="file://$PROJECT_DIR$/dz_8/js/notes.js" charset="UTF-8" />
+>>>>>>> c2d76fba0a38065b734dd5318def54213c7f9b79
   </component>
 </project>
